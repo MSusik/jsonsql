@@ -78,6 +78,5 @@ class BinaryExpression(object):
 
     def like(self, key):
         # Here we create sqlalchemy binaryexpression
-        print self.prefix + '"' + key + '"' + self.suffix
         return Record.jsonb.contains(self.prefix + '"' + key +
                                      '"' + self.suffix)
